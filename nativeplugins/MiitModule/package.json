@@ -1,0 +1,38 @@
+{
+	"name": "MiitOAID获取",
+	"id": "MiitModule",
+	"version": "1.0.0",
+	"description": "这是通过Android_CN_OAID获取设备oaid信息的插件",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"android": {
+			"plugins": [{
+				"type": "module",
+				"name": "MiitModule",
+				"class": "com.yoyo.unioaid.MiitModule"
+			}],
+			"integrateType": "aar",
+			"dependencies": [
+				"androidx.appcompat:appcompat:1.0.0",
+				"com.github.gzu-liyujiang:Android_CN_OAID:4.2.8"
+			],
+			"excludeDependencies": [
+				"com.hihonor.mcs:ads-identifier:1.0.2.301",
+				"base_oaid_sdk.aar"
+			],
+			"compileOptions": {
+				"sourceCompatibility": "1.8",
+				"targetCompatibility": "1.8"
+			},
+			"abis": [
+				"armeabi-v7a",
+				"arm64-v8a",
+				"x86"
+			],
+			"permissions": [
+				"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>"
+			]
+
+		}
+	}
+}
